@@ -6,23 +6,14 @@
 <title>FRIENDS FARMS | நாட்டுச் சேவல் மற்றும் கோழி விற்பனை - A. Ammapatti</title>
 <meta name="description" content="FRIENDS FARMS - நாட்டுச் சேவல் மற்றும் நாட்டுக் கோழி விற்பனை, A. Ammapatti. Phone and WhatsApp enquiries welcome.">
 <meta name="theme-color" content="#174b2b">
-
-<!-- Open Graph (WhatsApp / Facebook link preview) -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="FRIENDS FARMS | நாட்டுச் சேவல் மற்றும் கோழி விற்பனை">
 <meta property="og:description" content="நாட்டுச் சேவல் மற்றும் கோழி விற்பனை - A. Ammapatti. WhatsApp / Call: 9361093234">
 <meta property="og:locale" content="ta_IN">
-<!-- TODO: add a real photo URL below after you upload one -->
-<!-- <meta property="og:image" content="https://YOUR-SITE.com/og-image.jpg"> -->
-
-<!-- Favicon (emoji) -->
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐓</text></svg>">
-
-<!-- Tamil font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;700;800&display=swap" rel="stylesheet">
-
 <style>
 :root{--green:#174b2b;--green2:#2c6b3f;--gold:#d8b45a;--cream:#fffaf0;--ink:#1d2a20;--muted:#657267}
 *{box-sizing:border-box}body{margin:0;font-family:"Noto Sans Tamil",Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
@@ -32,26 +23,27 @@ nav{display:flex;gap:8px;flex-wrap:wrap}nav a{color:white;text-decoration:none;f
 .hero{padding:58px 6% 52px;background:radial-gradient(ellipse at top right,#e6d49c 0,transparent 42%),linear-gradient(135deg,#f8f2df,#fffaf0);display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:30px}
 .eyebrow{color:var(--green2);font-weight:800;letter-spacing:1.4px;font-size:13px}.hero h2{font-size:clamp(30px,5vw,49px);line-height:1.15;color:var(--green);margin:10px 0 16px}.hero p{max-width:620px;color:#4c5b4e;font-size:17px}
 .hero-art{min-height:220px;border:2px dashed #c9b16b;border-radius:24px;background:#f2e7c6;display:flex;align-items:center;justify-content:center;text-align:center;padding:25px;font-size:76px;overflow:hidden}.hero-art small{display:block;font-size:15px;color:var(--green);font-weight:700}
-.hero-art img{width:100%;height:100%;object-fit:cover;border-radius:18px}
 .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{display:inline-block;padding:12px 19px;border-radius:10px;text-decoration:none;font-weight:800}.btn-gold{background:var(--gold);color:#172819}.btn-green{background:var(--green);color:white}
 section{padding:46px 6%}.section-title{text-align:center;margin:0 0 8px;color:var(--green);font-size:clamp(25px,4vw,34px)}.sub{text-align:center;color:var(--muted);margin:0 auto 28px;max-width:700px}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{background:white;border:1px solid #e6e2d5;border-radius:17px;overflow:hidden;box-shadow:0 6px 18px #183a1b0d}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{background:white;border:1px solid #e6e2d5;border-radius:17px;overflow:hidden;box-shadow:0 6px 18px #183a1b0d;position:relative}
+.card.sold{opacity:.8}
 .bird-img{height:190px;background:#f0e8cf;display:grid;place-items:center;font-size:58px;color:var(--green);overflow:hidden}
 .bird-img img{width:100%;height:100%;object-fit:cover;display:block}
+.card.sold .bird-img img{filter:grayscale(.8)}
 .card-body{padding:18px}.card h3{margin:0 0 6px;color:var(--green)}.card p{margin:5px 0;color:var(--muted)}
 .price{font-size:20px;font-weight:800;color:var(--green2)}
 .status{display:inline-block;background:#edf4e8;color:#285d32;padding:4px 9px;border-radius:99px;font-size:12px;font-weight:700;margin-top:8px}
+.status.sold{background:#fbe9e7;color:#b3261e}
+.btn.disabled{background:#cfd6c8;color:#657267;pointer-events:none}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted)}
 .info{background:#edf3e8}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{padding:20px;background:white;border-radius:14px;border:1px solid #dce7d8}.step b{color:var(--green);font-size:18px}
 .contact{background:var(--green);color:white;text-align:center}.contact .section-title{color:white}.contact .sub{color:#e4eddf}
 .contact-number{display:inline-block;font-size:clamp(23px,4vw,34px);font-weight:800;color:#f5d77d;letter-spacing:1px;margin:10px 0;text-decoration:none}
 .contact a.loc{color:#f5d77d;font-weight:700}
 .contact .actions{justify-content:center}
 footer{padding:18px 6% 90px;text-align:center;background:#10351e;color:#dce7d9;font-size:13px}
-
-/* Floating WhatsApp button */
 .wa-float{position:fixed;right:16px;bottom:16px;z-index:50;display:flex;align-items:center;gap:8px;background:#25d366;color:#fff;text-decoration:none;font-weight:800;padding:13px 18px;border-radius:99px;box-shadow:0 6px 18px #00000040}
 .wa-float svg{width:24px;height:24px;fill:#fff}
-
 @media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:40px}.hero-art{min-height:150px}.grid,.steps{grid-template-columns:1fr}header{align-items:flex-start}nav{width:100%}}
 </style>
 </head>
@@ -71,22 +63,13 @@ footer{padding:18px 6% 90px;text-align:center;background:#10351e;color:#dce7d9;f
       <a class="btn btn-green" href="tel:+919361093234">Call Now</a>
     </div>
   </div>
-  <!-- PHOTO TIP: replace the emoji block with a real farm photo:
-       <div class="hero-art"><img src="farm.jpg" alt="FRIENDS FARMS நாட்டுச் சேவல்"></div> -->
   <div class="hero-art" aria-hidden="true">🐓 🐔<div><small>FRIENDS FARMS<br>A. Ammapatti</small></div></div>
 </section>
 
 <section id="birds">
   <h2 class="section-title">எங்கள் விற்பனைப் பட்டியல்</h2>
-  <p class="sub">உண்மையான பறவைகளின் புகைப்படங்களையும் விலை விவரங்களையும் சேர்க்க இந்த இடம் தயாராக உள்ளது.</p>
-  <div class="grid">
-    <!-- HOW TO EDIT A CARD:
-         1. Replace the emoji inside .bird-img with: <img src="sevel1.jpg" alt="நாட்டுச் சேவல்" loading="lazy">
-         2. Replace the age and the price text with real values (example: <p class="price">₹ 650 முதல்</p>) -->
-    <article class="card"><div class="bird-img" aria-hidden="true">🐓</div><div class="card-body"><h3>நாட்டுச் சேவல்</h3><p>வயது: விவரம் கேட்கவும்</p><p class="price">விலை: தொடர்புகொண்டு கேட்கவும்</p><span class="status">கிடைப்பை உறுதிசெய்யவும்</span><div class="actions"><a class="btn btn-green wa" data-msg="வணக்கம், நாட்டுச் சேவல் விவரம் வேண்டும்" href="https://wa.me/919361093234" target="_blank" rel="noopener">விவரம் கேட்க</a></div></div></article>
-    <article class="card"><div class="bird-img" aria-hidden="true">🐔</div><div class="card-body"><h3>நாட்டுக் கோழி</h3><p>வயது: விவரம் கேட்கவும்</p><p class="price">விலை: தொடர்புகொண்டு கேட்கவும்</p><span class="status">கிடைப்பை உறுதிசெய்யவும்</span><div class="actions"><a class="btn btn-green wa" data-msg="வணக்கம், நாட்டுக் கோழி விவரம் வேண்டும்" href="https://wa.me/919361093234" target="_blank" rel="noopener">விவரம் கேட்க</a></div></div></article>
-    <article class="card"><div class="bird-img" aria-hidden="true">🌿🐓</div><div class="card-body"><h3>புதிய வரவு</h3><p>புதிய பறவைகள் சேர்க்கப்படும் போது விவரங்கள் புதுப்பிக்கப்படும்.</p><p class="price">விலை மற்றும் எண்ணிக்கைக்கு நேரடியாகக் கேளுங்கள்.</p><span class="status">WhatsApp மூலம் தொடர்பு</span><div class="actions"><a class="btn btn-green wa" data-msg="வணக்கம், FRIENDS FARMS புதிய வரவு விவரம் வேண்டும்" href="https://wa.me/919361093234" target="_blank" rel="noopener">விவரம் கேட்க</a></div></div></article>
-  </div>
+  <p class="sub">இன்றைய நிலவரப்படி கிடைக்கும் பறவைகள். விலை மற்றும் எண்ணிக்கையை உறுதிசெய்ய WhatsApp-ல் கேளுங்கள்.</p>
+  <div class="grid" id="birdGrid"><p class="empty">ஏற்றுகிறது...</p></div>
 </section>
 
 <section class="info" id="order">
@@ -118,12 +101,59 @@ footer{padding:18px 6% 90px;text-align:center;background:#10351e;color:#dce7d9;f
 
 <footer>© FRIENDS FARMS · Natural Farming • Trust · A. Ammapatti</footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-// Builds safe, encoded WhatsApp links from the data-msg text (works with Tamil on all phones)
-document.querySelectorAll('a.wa').forEach(function(a){
-  var msg = a.getAttribute('data-msg');
-  if(msg){ a.href = 'https://wa.me/919361093234?text=' + encodeURIComponent(msg); }
-});
+// ====== SAME SUPABASE VALUES AS owner.html ======
+const SUPABASE_URL = 'https://gthgmogrgsbrvyaucrst.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_DN3gzjlob9PQJo67BW8rfw_LtgH9khI';
+// ================================================
+
+const PHONE = '919361093234';
+const waLink = msg => 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(msg);
+
+// Fallback list if Supabase is not set up yet or is offline
+const FALLBACK = [
+  { name: 'நாட்டுச் சேவல்', age: 'விவரம் கேட்கவும்', price: 'தொடர்புகொண்டு கேட்கவும்', status: 'available', photo_url: '' },
+  { name: 'நாட்டுக் கோழி', age: 'விவரம் கேட்கவும்', price: 'தொடர்புகொண்டு கேட்கவும்', status: 'available', photo_url: '' }
+];
+
+function el(tag, cls, text){ const e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; }
+
+function renderBirds(birds){
+  const grid = document.getElementById('birdGrid'); grid.innerHTML = '';
+  if (!birds.length){ grid.appendChild(el('p', 'empty', 'தற்போது பறவைகள் பட்டியலில் இல்லை. WhatsApp-ல் கேளுங்கள்.')); return; }
+  birds.forEach(b => {
+    const sold = b.status === 'sold';
+    const card = el('article', 'card' + (sold ? ' sold' : ''));
+    const img = el('div', 'bird-img');
+    if (b.photo_url){ const i = document.createElement('img'); i.src = b.photo_url; i.alt = b.name; i.loading = 'lazy'; img.appendChild(i); }
+    else { img.textContent = '🐓'; img.setAttribute('aria-hidden', 'true'); }
+    const body = el('div', 'card-body');
+    body.appendChild(el('h3', '', b.name));
+    if (b.age) body.appendChild(el('p', '', 'வயது / எடை: ' + b.age));
+    if (b.price) body.appendChild(el('p', 'price', 'விலை: ' + b.price));
+    body.appendChild(el('span', 'status' + (sold ? ' sold' : ''), sold ? 'விற்றுவிட்டது' : 'கிடைக்கும்'));
+    const actions = el('div', 'actions');
+    const a = el('a', 'btn btn-green' + (sold ? ' disabled' : ''), sold ? 'Sold out' : 'விவரம் கேட்க');
+    if (!sold){ a.href = waLink('வணக்கம், ' + b.name + ' விவரம் வேண்டும்'); a.target = '_blank'; a.rel = 'noopener'; }
+    actions.appendChild(a); body.appendChild(actions);
+    card.append(img, body); grid.appendChild(card);
+  });
+}
+
+async function loadBirds(){
+  if (SUPABASE_URL.indexOf('YOUR_') === 0){ renderBirds(FALLBACK); return; }
+  try {
+    const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    const { data, error } = await sb.from('birds').select('*').order('sort').order('created_at');
+    if (error) throw error;
+    renderBirds(data);
+  } catch (e) { renderBirds(FALLBACK); }
+}
+
+// Encoded WhatsApp links for static buttons (works with Tamil text)
+document.querySelectorAll('a.wa').forEach(a => { const m = a.getAttribute('data-msg'); if (m) a.href = waLink(m); });
+loadBirds();
 </script>
 </body>
 </html>
